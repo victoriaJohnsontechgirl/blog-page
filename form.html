@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body{
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            line-height: 2rem;
+        }
+        header{
+            font-size: 1.5rem;
+            text-decoration: underline;
+            font-weight: bold;
+            text-transform: capitalize;
+            margin-bottom: 20px;
+        }
+
+        fieldset{
+            width: 400px;
+        }
+
+        form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+           
+        }
+
+        button{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>Book a table</header>
+    <main>
+         <!-- Form -->
+        <form>
+           <!-- date inputfield -->
+            <fieldset>
+                <label for="date">Booking date</label>
+                <input type="date" id="date" required>
+            </fieldset>
+             
+            <!-- number of people input(range) -->
+            <fieldset>
+                <label for="color">Number of people</label>
+                <input type="color" name="color type" id="color" value="#ff0000" oninput="color_disp.value = color.value" >
+                <!-- Another way -->
+                <!-- oninput="this.nexElementSibling.value=this.value" -->
+                 <output id="color_disp">#ff0000</output>
+            </fieldset>
+
+           
+
+            <!-- Location input selection -->
+            <!-- you don't need descriptive text in datalist -->
+            <fieldset>
+                <label for="Location">Location</label>
+                <input  list="Location"/>
+                <datalist id="Location"/>
+                <option value="kasoa"/>
+                <option value="Accra"/>
+                <option value="Camp"/>
+                </datalist>  
+            </fieldset>
+
+            <!-- submit button -->
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+   
+    
+</body>
+</html>
